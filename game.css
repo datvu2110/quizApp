@@ -1,0 +1,93 @@
+
+
+.choice-container{
+	display: flex;
+	background-color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	margin-left: 20px;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.choice-container:hover{
+	cursor: pointer;
+	box-shadow: 0 0.4rem 1.4rem 0 rgba(86,185,235,0.5);
+}
+
+.choice-text{
+	width: 100%;
+	text-align: center;
+	margin: 10px;
+}
+
+.next {
+	color: #fff !important;
+	width: 50%;
+	text-decoration: none;
+	background: #60a3bc;
+	padding: 10px;
+	border-radius: 50px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+	cursor: pointer;
+}
+
+.hidden{
+	display: none;
+}
+
+.choice-container label:hover{
+	cursor: pointer;
+}
+body{
+	background-color: #FFFAF0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+h2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0px;
+}
+.form-control{
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+	padding: 20px 50px 20px 50px;
+}
+
+.correct{
+	background-color: #90ee90;
+}
+.incorrect{
+	background-color: #ff7f7f;
+}
+.answerCheck{
+	text-align: center;
+	visibility: hidden;
+}
+
+.answerCheck.yes{
+	color: 	#7CFC00;
+	visibility: visible;
+}
+
+.answerCheck.wrong{
+	color: #ff7f7f;
+	visibility: visible;
+}
+.disabled{
+  pointer-events: none;
+}
+
+

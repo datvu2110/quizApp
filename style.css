@@ -1,0 +1,55 @@
+*{
+	box-sizing: border-box;
+	font-family: "Monaco";
+}
+
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: Monaco;
+	background-color: #f9fafb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.container{
+	border-radius: 8px;
+	background-color: #fff;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+	width: 400px;
+}
+h2{
+	text-align: center;
+	margin: 0 0 20px;
+}
+.form{
+	padding:30px 40px;
+}
+.btn{
+	text-decoration: none;
+	width: 100%;
+	background-color: #3498db;
+	border: 2px solid #3498db;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 20px;
+	padding: 10px;
+	color: white;
+	justify-content: center;
+	display: flex;
+}
+
+
+.background{
+	background: url("https://thumbs.dreamstime.com/z/workspace-web-developer-text-code-abstract-blue-backg-workspace-web-developer-text-code-abstract-blue-131817056.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.btn:hover{
+	background-color: #66b3ff;
+	border: 2px solid #66b3ff;
+}
