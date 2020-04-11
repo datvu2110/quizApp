@@ -1,5 +1,4 @@
 
-
 .choice-container{
 	display: flex;
 	background-color: white;
@@ -25,7 +24,7 @@
 	margin: 10px;
 }
 
-.next {
+.next, .submit{
 	color: #fff !important;
 	width: 50%;
 	text-decoration: none;
@@ -88,6 +87,10 @@ h2{
 }
 .disabled{
   pointer-events: none;
+}
+.next:hover, .submit:hover{
+	cursor: pointer;
+	background-color: #29b8e5;
 }
 
 
