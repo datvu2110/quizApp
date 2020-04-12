@@ -120,7 +120,6 @@ $(document).on("click",".submit",function(e){
 
 });
 
-
 $('.choice-container').click(function () {    
 	$('.tlRadio').prop('checked', false);
     var val =  $(this).find('input:radio').prop('checked')?false:true;
