@@ -4,14 +4,18 @@
   <title>Quiz App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="end.css">
 </head>
 <body>
 	<form id= "form-control" class="form-control" action="" method="post">
-				<div>30</div>
-				<div class="button_cont" align="center"><a class="submit">Submit</a></div>
-				<div class="button_cont" align="center"><a class="next">Next</a></div>
-			</form>
-  <script src="script.js"></script>
+		<div class="format">Your Score is: </div>
+		<div class="format" id="score">30</div>
+		<a class="btn" href="/index.html">Home</a>
+		<a class="btn" href="/game.html">Play Again</a>
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  	<script src="end.js"></script>
+
 </body>
 </html>

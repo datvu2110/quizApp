@@ -6,36 +6,44 @@ let score = 0;
 let availableQuestion =[]; 
 let questions = [
 	{
-		question: "Name of your dog: ",
-		1: "Lucky",
-		2: "Jerry",
-		3: "Mickey",
-		4: "Donald",
+		question: "Panama, Guatemala, Costa Rica, and Nicaragua are all located in: ",
+		1: "Central America",
+		2: "Europe",
+		3: "South America",
+		4: "North America",
 		answer : 1
 	},
 	{
-		question: "City: ",
-		1: "Austin",
-		2: "Nha Trang",
-		3: "Ha Noi",
-		4: "Vung Tau",
+		question: "The Amazon River makes up 2/3 of: ",
+		1: "Mexico",
+		2: "Brazil",
+		3: "Bolivia",
+		4: "Argentina",
 		answer : 2
 	},
 	{
-		question: "Last Name: ",
-		1: "Vu",
-		2: "Tran",
-		3: "Nguyen",
-		4: "Do",
+		question: "By the early twentieth century, which foreign country was dominant in the Caribbean?",
+		1: "United States",
+		2: "Spain",
+		3: "Great Britain",
+		4: "France",
 		answer : 1
 	},
 	{
-		question: "2 + 2 = ",   
-		1: "6",
-		2: "2",
-		3: "4",
-		4: "3",
+		question: "Which American president was responsible for the construction of the Panama Canal?",   
+		1: "Benjamin Franklin",
+		2: "Ronald Regan",
+		3: "Theodore Roosevelt",
+		4: "Richard Nixon",
 		answer : 3
+	},
+	{
+		question: "How many states in the United States?",   
+		1: "49",
+		2: "50",
+		3: "51",
+		4: "52",
+		answer : 2
 	}
 ];
 
@@ -55,6 +63,7 @@ function displayQuestion(){
 	
 
 	if (availableQuestion.length ===0 ){
+		localStorage.setItem("lastScore", score);
 		return window.location.assign("/end.html");
 	}
 	$('#numQues').text(questionCounter  + "/" +questions.length);
