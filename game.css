@@ -93,4 +93,15 @@ h2{
 	background-color: #29b8e5;
 }
 
-
+.result{
+	display: flex;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 30px;
+	font-family: Monaco;
+	font-size:1.5em;
+	color: #60a3bc;
+}
+#numQues, #score{
+	text-align: center;
+}

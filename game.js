@@ -1,9 +1,9 @@
 let choices  = $.makeArray($('.choice-text'));
-const MAX_QUESTION  = 3;
+let containter = $.makeArray($('.choice-container'));
 let currentQuestion ={};
 let questionCounter = 0;
+let score = 0;
 let availableQuestion =[]; 
-
 let questions = [
 	{
 		question: "Name of your dog: ",
@@ -47,11 +47,18 @@ function startGame (){
 }
 
 function displayQuestion(){
+
+	$(".choice-container").removeClass('disabled');
 	$(".submit").removeClass('hidden');
 	$( ".tlRadio" ).prop( "checked", false );
-	if (availableQuestion.length ===0 || questionCounter >= MAX_QUESTION){
+	questionCounter++;
+	
+
+	if (availableQuestion.length ===0 ){
 		return window.location.assign("/end.html");
 	}
+	$('#numQues').text(questionCounter  + "/" +questions.length);
+
 	const questionIndex = Math.floor(Math.random() * availableQuestion.length);
 	currentQuestion = availableQuestion[questionIndex];
 	question.innerText = currentQuestion.question;
@@ -63,12 +70,15 @@ function displayQuestion(){
 }
 
 $(document).on("click",".next",function(e){
+	$('.next').addClass('hidden');
+	$('.answerCheck').empty();
 	$('input[type="radio"]:checked').parent().removeClass('correct');
 	$('input[type="radio"]:checked').parent().removeClass('incorrect');
 	$('.answerCheck').removeClass('wrong');
 	$('.answerCheck').removeClass('yes');
 	displayQuestion();
-	questionCounter++;
+	
+
 });
 
 $(document).on("click",".submit",function(e){
@@ -80,18 +90,25 @@ $(document).on("click",".submit",function(e){
 			$('.answerCheck').addClass('yes');
 			$('.answerCheck').text('Your answer is correct');
 			$('input[type="radio"]:checked').parent().addClass('correct');
+			score++;
+			$('#score').text(score +'/' + questions.length);
 		}
 		else {
+			
 			$('.answerCheck').addClass('wrong');
-			$('.answerCheck').text('Your answer is INCORRECT');
+			$('.answerCheck').text("Your answer is INCORRECT. Correct answer is " + currentQuestion[currentQuestion.answer]);
 			$('input[type="radio"]:checked').parent().addClass('incorrect');
 		}
+		$(".submit").addClass('hidden');
+		$(".choice-container").addClass('disabled');
 	
 	}
 	else{
 		alert("please select");
+		$('.choice-container').removeClass('disabled');
+		$(".next").addClass('hidden');
 	}
-	$(".submit").addClass('hidden');
+
 });
 
 
@@ -104,23 +121,6 @@ $('.choice-container').click(function () {
 
 startGame();
 
-
-/*const selectedChoice = $('input[type="radio"]:checked').parent().find('label').text();
-	if (selectedChoice == currentQuestion.answer){
-		$('.answerCheck').addClass('yes');
-		$('.answerCheck').text('Your answer is correct');
-		$('input[type="radio"]:checked').parent().addClass('correct');
-	}
-	else {
-		$('.answerCheck').addClass('wrong');
-		$('.answerCheck').text('Your answer is INCORRECT');
-		$('input[type="radio"]:checked').parent().addClass('incorrect');
-	}
-	
-	$('.choice-container').addClass('disabled');
-	
-	getNewQuestion();
-*/
 
 
 
