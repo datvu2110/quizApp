@@ -64,7 +64,7 @@ function displayQuestion(){
 
 	if (availableQuestion.length ===0 ){
 		localStorage.setItem("lastScore", score);
-		return window.location.assign("/end.html");
+		return window.location.assign("/quizApp/end.html");
 	}
 	$('#numQues').text(questionCounter  + "/" +questions.length);
 
@@ -120,7 +120,6 @@ $(document).on("click",".submit",function(e){
 	}
 
 });
-
 
 $('.choice-container').click(function () {    
 	$('.tlRadio').prop('checked', false);
