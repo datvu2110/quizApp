@@ -113,6 +113,7 @@ $(document).on("click",".submit",function(e){
 	
 	}
 	else{
+		$(".next").addClass('hidden');
 		alert("please select");
 		$('.choice-container').removeClass('disabled');
 		$(".next").addClass('hidden');
